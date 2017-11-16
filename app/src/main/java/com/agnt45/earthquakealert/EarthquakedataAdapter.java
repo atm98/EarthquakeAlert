@@ -2,6 +2,7 @@ package com.agnt45.earthquakealert;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -33,7 +34,7 @@ public class EarthquakedataAdapter extends ArrayAdapter<EarthquakeData> {
                     R.layout.listitem, parent, false);
         }
         EarthquakeData earthquakeData = getItem(position);
-        TextView magnitude =  listItemView.findViewById(R.id.magintude);
+        TextView magnitude =  listItemView.findViewById(R.id.magnitude);
         TextView location1  = listItemView.findViewById(R.id.location1);
         TextView location2  = listItemView.findViewById(R.id.location2);
         TextView date = listItemView.findViewById(R.id.date);
@@ -41,7 +42,7 @@ public class EarthquakedataAdapter extends ArrayAdapter<EarthquakeData> {
         Double mag = Double.parseDouble(earthquakeData.getMagnitude());
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
         String  Magnitude = decimalFormat.format(mag);
-        magnitude.setText(Magnitude);
+
         String place = earthquakeData.getLocation();
         if (place.contains(" of ")) {
             String[] parts = place.split("(?<=of)");
@@ -55,10 +56,18 @@ public class EarthquakedataAdapter extends ArrayAdapter<EarthquakeData> {
             location1.setText(locationOffset);
             location2.setText(primaryLocation);
         }
+        GradientDrawable magnitudeCircle = (GradientDrawable) magnitude.getBackground();
+        int magnitudeColor = getMagnitudeColor(mag);
 
         date.setText(earthquakeData.getDate());
         time.setText(earthquakeData.getTime());
+        magnitude.setText(Magnitude);
         return  listItemView;
 
+    }
+
+    private int getMagnitudeColor(Double mag) {
+
+        return 0;
     }
 }
