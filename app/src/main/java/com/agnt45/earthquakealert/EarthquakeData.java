@@ -45,10 +45,22 @@ public class EarthquakeData {
     String Date;
     String Time;
 
-    public EarthquakeData(String magnitude, String location, String date, String time) {
+    public String getUrl() {
+        return Url;
+    }
+
+    public void setUrl(String url) {
+        this.Url = url;
+    }
+
+    String Url;
+
+
+    public EarthquakeData(String magnitude, String location, String date, String time,String url) {
         Magnitude = magnitude;
         Location = location;
         Date = date;
         Time = time;
+        Url = url;
     }
 }

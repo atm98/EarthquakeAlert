@@ -61,7 +61,8 @@ public class QueryUtils {
                 SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("HH:mm a");
                 String Time = simpleDateFormat1.format(date);
                 String Date = simpleDateFormat.format(date);
-                earthquakes.add(new EarthquakeData(data.getString("mag"),data.getString("place"),Date,Time));
+                String url =data.getString("url");
+                earthquakes.add(new EarthquakeData(data.getString("mag"),data.getString("place"),Date,Time,url));
 
 
 
