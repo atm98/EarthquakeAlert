@@ -1,7 +1,6 @@
 package com.agnt45.earthquakealert;
 
 import android.app.Activity;
-import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,10 +13,9 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Created by Agnt45 on 11-11-2017.
+ * Created by an160 on 18-12-2017.
  */
 
 public class EarthquakedataAdapter extends ArrayAdapter<EarthquakeData> {

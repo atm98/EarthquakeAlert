@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EarthquakeAlert</string>
+    <string name="emptyMessageString">No Earthquakes Found</string>
+    <string name="nointernetConnectionMessageString">No Internet Connection</string>
 </resources>

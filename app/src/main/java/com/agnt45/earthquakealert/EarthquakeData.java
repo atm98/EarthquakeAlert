@@ -1,5 +1,7 @@
 package com.agnt45.earthquakealert;
 
+import java.util.Date;
+
 /**
  * Created by Agnt45 on 11-11-2017.
  */
@@ -56,10 +58,10 @@ public class EarthquakeData {
     String Url;
 
 
-    public EarthquakeData(String magnitude, String location, String date, String time,String url) {
+    public EarthquakeData(String magnitude, String location,String date , String time,String url) {
         Magnitude = magnitude;
         Location = location;
-        Date = date;
+        date = Date;
         Time = time;
         Url = url;
     }
